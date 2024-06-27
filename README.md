@@ -15,7 +15,7 @@ Mentor: SRAVANI GOUNI
 
 Project: A user friendly TO-DO LIST using HTML,CSS and JS!
 
-![alt text](image.png)
+![alt text](image.png){width=50%}
 
 Objective 
 

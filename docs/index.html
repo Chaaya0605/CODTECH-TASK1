@@ -9,9 +9,25 @@
 <div class="container">
     <div class="todo-app">
         <h2>To-Do List<img src="images/icon.png"></h2>
+        <div class="tracker">
+            <div id="task-tracker-circle">
+                <span id="task-tracker">0/0</span>
+            </div>
+            <p id="task-tracker-text">Tasks Completed!</p>
+            <div class = "row">
+                <input id="goal-input" type="number" placeholder="Set a goal!">
+                <button id="set-goal-btn">Set Goal</button>
+            </div>
+        </div>
         <div class="row">
-            <input type="text" id="input-box" placeholder="Add your Task">
+            <input type="text" id="input-box" placeholder="Add a Task to your List!">
             <button onclick="AddTask()">Add</button>
+        </div>
+        <div class="filter-buttons">
+            <button onclick="showAllTasks()">All</button>
+            <button onclick="showCompletedTasks()">Completed</button>
+            <button onclick="showIncompleteTasks()">Incomplete</button>
+            <button onclick="deleteAllTasks()">Delete All</button>
         </div>
         <ul id="list-container">
             <!-- <li class="checked">Task 1</li>
@@ -19,6 +35,7 @@
             <li>Task 3</li>
             <li>Task 4</li> -->
         </ul>
+        
     </div>
 </div>
 <script src="script.js"></script>

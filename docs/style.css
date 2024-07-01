@@ -5,21 +5,25 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url('images/bg-4.jpeg');
+    background-size: cover;
+    background-position: center;
+}
 .container{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #153677,#4e085f);
     padding: 10px;
 }
 
 .todo-app{
     width: 100%;
-    max-width: 600px;
-    background: rgba(186, 184, 188, 0.4);
+    max-width: 800px;
+    background: rgba(116, 89, 43, 0.8);
     margin: 100px auto 20px;
     padding: 50px 40px 80px;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(33, 120, 175, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
 }
 
 .todo-app h2{
@@ -27,7 +31,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    font-size: xx-large;
+    font-size: 40px;
+    font-weight: 800;
+    font-style: normal;
 }
 
 .todo-app h2 img{
@@ -63,12 +69,14 @@ button{
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 40px;
+    /* margin-bottom: 10px; */
+
 }
 
 ul li{
     list-style: none;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 500;
     padding: 12px 8px 12px 50px;
     user-select: none;
@@ -91,7 +99,7 @@ ul li::before{
 }
 
 ul li.checked{
-    color: #6e3333;
+    color: #d6d5d5;
     text-decoration: line-through;
 }
 
@@ -115,4 +123,83 @@ ul li span{
 
 ul li span:hover{
     background: #e13d3d;
+}
+
+.filter-buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button{
+     /* width: 25%; */
+    margin: 0 10px;
+}
+
+.tracker {
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#task-tracker-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #112138;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(40, 39, 39, 0.4);
+    transition: transform 0.5s ease-in-out;
+}
+
+#task-tracker-circle.completed {
+    animation: task-complete 0.5s ease-in-out;
+}
+
+#task-tracker {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#task-tracker-text {
+    color: #112138;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+@keyframes task-complete {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#set-goal-btn{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #112138;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 40px;
 }
